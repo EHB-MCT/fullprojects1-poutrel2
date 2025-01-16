@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styleguide</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/base-layout.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/typo.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1>UI Guideline</h1>
+        <p>Version 1</p>
+    </header>
+
+    <main class="container">
+        <!-- Color Palette Section -->
+        <section>
+            <h2>Color Palette</h2>
+            <div class="color-palette">
+                <div class="color-group">
+                    <h3>Primary Colors</h3>
+                    <div class="color-item" style="background-color: #374F43; color: #FFFFFF;">Dark Green<br>#374F43</div>
+                    <div class="color-item" style="background-color: #EAE1D8; color: #000000;">Light Beige<br>#EAE1D8</div>
+                    <div class="color-item" style="background-color: #E1AB89; color: #FFFFFF;">Beige<br>#E1AB89</div>
+                    <div class="color-item" style="background-color: #FFFFFF; color: #000;">White<br>#FFFFFF</div>
+                </div>
+
+                <div class="color-group">
+                    <h3>Accent Colors</h3>
+                    <div class="color-item" style="background-color: #7F96AB; color: #FFFFFF;">Steel Blue<br>#7F96AB</div>
+                    <div class="color-item" style="background-color: #E1936D; color: #FFFFFF;">Peach<br>#E1936D</div>
+                    <div class="color-item" style="background-color: #1D5F84; color: #FFFFFF;">Dark Blue<br>#1D5F84</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Typography Section -->
+        <section>
+            <h2>Typography</h2>
+            <div class="typography">
+                <div class="typography-item">
+                    <h3>Font Families</h3>
+                    <p><strong>Primary Font:</strong> Libre Baskerville (Italic, used for H1)</p>
+                    <p><strong>Secondary Font:</strong> Raleway (Regular and Bold, used for H2, H3, and H4)</p>
+                </div>
+                <div class="typography-sizes">
+                    <h3>Font Sizes</h3>
+                    <p style="font-size: 2em; font-family: 'Libre Baskerville', serif;">Heading 1</p>
+                    <p style="font-size: 1.5em; font-family: 'Raleway', sans-serif;">Heading 2</p>
+                    <p style="font-size: 1.25em; font-family: 'Raleway', sans-serif; font-weight: 700;">Heading 3</p>
+                    <p style="font-size: 1em; font-family: 'Raleway', sans-serif; font-weight: 700;">Heading 4</p>
+                    <p style="font-size: 1em; font-family: 'Sofia Pro', sans-serif;">Body Text</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Buttons Section -->
+        <section>
+            <h2>Buttons</h2>
+            <a href="#" class="btn-primary">Primary</a>
+            <a href="#" class="btn-secondary">Secondary</a>
+            <a href="#" class="btn-info">Meer Info</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2023 Styleguide</p>
+    </footer>
+</body>
+</html>
+--------------
+typo
+
+/* TYPOGRAPHY */
+h1 {
+  font-family: 'Libre Baskerville', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: #374F43;
+}
+
+h2 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 400;
+  color: #1D5F84;
+}
+
+h3, h4 {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 700;
+  color: #1D5F84;
+  text-transform: uppercase;
+}
+
+p {
+  font-family: 'Sofia Pro', sans-serif;
+  font-weight: 400;
+  color: #374F43;
+}
+
+.h1-sample {
+  font-size: 2em;
+}
+
+.h2-sample {
+  font-size: 1.5em;
+}
+
+.h3-sample {
+  font-size: 1.25em;
+}
+
+.h4-sample {
+  font-size: 1em;
+}
+
+.body-text {
+  font-size: 1em;
+}
+
+--------------nav
+/* NAVIGATION */
+nav {
+  background-color: #1D5F84;
+  padding: 1em 0;
+}
+
+nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav li {
+  margin: 0 1em;
+}
+
+nav a {
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+--------------buttons
+/* BUTTONS */
+.btn-primary {
+  background-color: #7F96AB;
+  color: #FFFFFF;
+  padding: 0.75em 1.5em;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.btn-primary:hover {
+  background-color: #6D859B;
+}
+
+.btn-secondary {
+  background-color: #E1936D;
+  color: #FFFFFF;
+  padding: 0.75em 1.5em;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+}
+
+.btn-info {
+  border: 4px solid #FFFFFF;
+  color: #FFFFFF;
+  padding: 0.75em 1.5em;
+  border-radius: 30px;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+

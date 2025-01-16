@@ -1,35 +1,71 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Styleguide 1</title>
-		<link rel="stylesheet" href="css/normalize.css" />
-		<link rel="stylesheet" href="css/base-layout.css" />
-		<link rel="stylesheet" href="css/nav.css" />
-		<link rel="stylesheet" href="css/typo.css" />
-		<link rel="stylesheet" href="css/buttons.css" />
-	</head>
-	<body>
-		<h1>Heading 1</h1>
-		<h2>Heading 2</h2>
-		<h3>Heading 3</h3>
-		<h4>Heading 4</h4>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styleguide</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/base-layout.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/typo.css">
+    <link rel="stylesheet" href="css/buttons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital@1&family=Raleway:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <h1>UI Guideline</h1>
+        <p>Version 1</p>
+    </header>
 
-		<p>
-			Lorem ipsum dolor sit amet <a href="#">link</a> consectetur adipisicing
-			elit. Quisquam quibusdam, voluptatum, quod, quia voluptatem voluptas quos
-			asperiores, voluptate quae quas doloribus. Quisquam quibusdam, voluptatum,
-			quod, quia voluptatem voluptas quos asperiores, voluptate quae quas
-			doloribus.
-		</p>
+    <main class="container">
+        <section>
+            <h2>Color Palette</h2>
+            <div class="color-palette">
+                <div class="color-group">
+                    <h3>Primary Colors</h3>
+                    <div class="color-item dark-green">Dark Green<br>#374F43</div>
+                    <div class="color-item light-beige">Light Beige<br>#EAE1D8</div>
+                    <div class="color-item beige">Beige<br>#E1AB89</div>
+                    <div class="color-item white">White<br>#FFFFFF</div>
+                </div>
+                <div class="color-group">
+                    <h3>Accent Colors</h3>
+                    <div class="color-item steel-blue">Steel Blue<br>#7F96AB</div>
+                    <div class="color-item peach">Peach<br>#E1936D</div>
+                    <div class="color-item dark-blue">Dark Blue<br>#1D5F84</div>
+                </div>
+            </div>
+        </section>
 
-		<ul>
-			<li>List item</li>
-			<li>List item</li>
-		</ul>
+        <section>
+            <h2>Typography</h2>
+            <div class="typography">
+                <div class="typography-item">
+                    <h3>Font Families</h3>
+                    <p><strong>Primary Font:</strong> Libre Baskerville (Italic, used for H1)</p>
+                    <p><strong>Secondary Font:</strong> Raleway (Regular and Bold, used for H2, H3, and H4)</p>
+                </div>
+                <div class="typography-sizes">
+                    <h3>Font Sizes</h3>
+                    <p class="h1-example">Heading 1</p>
+                    <p class="h2-example">Heading 2</p>
+                    <p class="h3-example">Heading 3</p>
+                    <p class="h4-example">Heading 4</p>
+                    <p class="body-text">Body Text</p>
+                </div>
+            </div>
+        </section>
 
-		<a href="#" class="btn-primary">Primary</a>
-		<a href="#" class="btn-secondary">Secondary</a>
-	</body>
+        <section>
+            <h2>Buttons</h2>
+            <a href="#" class="btn-primary">Primary</a>
+            <a href="#" class="btn-secondary">Secondary</a>
+            <a href="#" class="btn-info">Meer Info</a>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>&copy; 2025 Styleguide</p>
+    </footer>
+</body>
 </html>

@@ -1,5 +1,121 @@
-/* BASE LAYOUT FLEXBOX */
+/* Header */
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #EAE1D8;
+    color: #374F43;
+    font-family: 'Libre Baskerville', serif;
+}
 
-body {
-	margin: 0;
+/* Main Container */
+.container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Color Palette */
+.color-palette {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.color-group {
+    flex: 1;
+}
+.color-item {
+    text-align: center;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    font-family: 'Raleway', sans-serif;
+    font-weight: bold;
+}
+.color-item.dark-green {
+    background-color: #374F43;
+    color: #FFFFFF;
+}
+.color-item.light-beige {
+    background-color: #EAE1D8;
+    color: #000000;
+}
+.color-item.beige {
+    background-color: #E1AB89;
+    color: #FFFFFF;
+}
+.color-item.white {
+    background-color: #FFFFFF;
+    color: #000;
+}
+.color-item.steel-blue {
+    background-color: #7F96AB;
+    color: #FFFFFF;
+}
+.color-item.peach {
+    background-color: #E1936D;
+    color: #FFFFFF;
+}
+.color-item.dark-blue {
+    background-color: #1D5F84;
+    color: #FFFFFF;
+}
+
+/* Typography */
+.typography {
+    margin-top: 20px;
+}
+.typography-sizes p {
+    margin: 10px 0;
+}
+.h1-example {
+    font-size: 2em;
+    font-family: 'Libre Baskerville', serif;
+}
+.h2-example {
+    font-size: 1.5em;
+    font-family: 'Raleway', sans-serif;
+}
+.h3-example {
+    font-size: 1.25em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+.h4-example {
+    font-size: 1em;
+    font-family: 'Raleway', sans-serif;
+    font-weight: 700;
+}
+.body-text {
+    font-size: 1em;
+    font-family: 'Sofia Pro', sans-serif;
+}
+
+/* Buttons */
+.btn-primary, .btn-secondary, .btn-info {
+    text-decoration: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: inline-block;
+    margin: 5px;
+    font-family: 'Raleway', sans-serif;
+}
+.btn-primary {
+    background-color: #374F43;
+    color: #FFFFFF;
+}
+.btn-secondary {
+    background-color: #E1AB89;
+    color: #FFFFFF;
+}
+.btn-info {
+    background-color: #1D5F84;
+    color: #FFFFFF;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #374F43;
+    color: #FFFFFF;
 }

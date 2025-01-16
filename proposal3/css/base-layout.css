@@ -1,0 +1,74 @@
+/* BASE LAYOUT FLEXBOX */
+
+body {
+	background-color: #ffffff; 
+	color: #1b1b1b; 
+	font-family: 'Coconat', sans-serif; 
+	margin: 0;
+	padding: 20px;
+  }
+
+  .heading {
+	font-size: 54px;
+	font-weight: bold;
+	margin-bottom: 10px;
+  }
+
+  .subtitle {
+	font-size: 14px;
+	margin-bottom: 10px;
+  }
+
+
+/* for the color boxes*/
+#colors {
+    display: flex; 
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+    flex-wrap: wrap; 
+}
+.cd-box {
+    width: 150px; 
+    border-radius: 15px; 
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif; 
+    background-color: #2C2F38; 
+    color: white;
+}
+.color-preview {
+    height: 100px; 
+}
+
+.color-info {
+    padding: 10px; 
+    text-align: center; 
+}
+
+.color-name {
+    font-size: 14px; 
+    font-weight: bold; 
+    margin: 0; 
+}
+
+.color-code {
+    font-size: 12px; 
+    margin: 0; 
+    color: #bbb; 
+}
+
+@font-face {
+    font-family: 'Coconat'; /* Nombre que usarás en tu CSS */
+    src: url('../fonts/Coconat-Regular.woff2') format('woff2'), /* Navegadores modernos */
+         url('../fonts/Coconat-Regular.woff') format('woff');  /* Respaldo */
+    font-weight: normal; /* Puedes definir diferentes pesos */
+    font-style: normal;  /* Puedes definir estilos como italic */
+}
+ #Title{
+	color:#DC1F26; 
+ }
+
+ #mainT{
+	text-align: center;
+ }

@@ -1,0 +1,62 @@
+/* TYPOGRAPHY */
+@font-face {
+    font-family: 'Coconat'; /* Nombre que usarás en tu CSS */
+    src: url('../fonts/Coconat-Regular.woff2') format('woff2'), /* Navegadores modernos */
+         url('../fonts/Coconat-Regular.woff') format('woff');  /* Respaldo */
+    font-weight: normal; /* Puedes definir diferentes pesos */
+    font-style: normal;  /* Puedes definir estilos como italic */
+}
+ 
+
+h1 {
+    font-family: 'Coconat', sans-serif;
+    font-size: 77px;
+}
+
+h2 {
+    font-family: 'Coconat', sans-serif;
+    font-size: 55px;
+}
+
+h3,ul {
+font-family: "tenon", sans-serif;
+font-weight: 300;
+font-style: normal;
+font-size: 21px;
+}
+
+h4 {
+font-family: "tenon", sans-serif;
+font-weight: 200;
+font-style: normal;
+font-size: 20px;
+}
+
+h5 {
+    font-family: "tenon", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 20px;
+}
+
+h6{
+    font-family: tenon, sans-serif;
+    font-weight: 800;
+    font-style: normal;
+    font-size: 16px; 
+}
+
+p {
+font-family: "tenon", sans-serif;
+font-weight: 400;
+font-style: normal;
+font-size: 20px; 
+}
+
+a {
+}
+
+/*for displaying the text*/
+
+
+

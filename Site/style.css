@@ -109,6 +109,9 @@ header {
 .about {
   position: relative;
 
+  header {
+    height: fit-content;
+  }
   /* Zorg dat de afbeelding altijd de volledige breedte inneemt */
   .background img {
     display: block;
@@ -116,6 +119,9 @@ header {
     height: auto; /* Behoud de verhoudingen van de afbeelding */
   }
 
+  .about-content {
+    position: relative;
+  }
   /* Algemeen voor de tekstsecties */
   .sections {
     position: absolute; /* Plaats deze sectie boven de achtergrond */

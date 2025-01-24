@@ -127,10 +127,13 @@ header {
     border-radius: 10px; /* Rond de hoeken een beetje af */
     box-sizing: border-box;
     display: grid;
+    gap: 0 6vw;
     grid-template-areas: 
                         " . about"
                         " mission ."
                         "video video";
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
   }
 
   /* Specifieke positionering */
@@ -138,7 +141,7 @@ header {
     grid-area: about;
 
     /* Tekststijl */
-    font-size: 22px; /* Pas de tekstgrootte aan */
+    font-size: 1.8vw; /* Pas de tekstgrootte aan */
     line-height: 1.5; /* Zorg voor ruimte tussen de regels */
     font-weight: bold; /* Maak de tekst vetgedrukt */
     color: #333; /* Pas de tekstkleur aan */

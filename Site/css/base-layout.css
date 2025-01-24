@@ -8,6 +8,7 @@ body {
   background-color: var(--main-bg);
 
   display: flex;
+  padding: 0;
   flex-direction: column;
   overflow: hidden scroll;
 }

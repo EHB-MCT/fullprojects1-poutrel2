@@ -1,11 +1,3 @@
-/* Zorg ervoor dat de pagina geen marges of padding heeft */
-html, body {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  height: 100%;
-}
-
 /* Zorg dat de afbeelding altijd de volledige breedte inneemt */
 .background img {
   display: block;

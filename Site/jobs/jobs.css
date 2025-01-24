@@ -1,0 +1,121 @@
+
+.jobs {
+  margin: 12vw auto 0;
+
+  .imageJobs2,
+  .imageJobs1 {
+    width: 100vw;
+  }
+  .imageJobs2 {
+    margin-top: -30vw;
+  }
+  .imageJobs1 {
+    margin-top: 100px;
+    position: absolute;
+    top: 0;
+  }
+  .vacancies {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0 50px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    max-width: 2000px;
+    margin: 0 auto;
+
+    h1 {
+      font-size: 60px;
+      z-index: 1;
+      position: relative;
+      margin-left: 30px;
+      margin-bottom: 10vw;
+      text-shadow: 0 0 2px white;
+
+      &::after {
+        content: "";
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        background-color: #DC1F26;
+        top: -20px;
+        left: -30px;
+        border-radius: 50%;
+        z-index: -1;
+      }
+    }
+    .list:not(.empty) ~ h2 {
+      display: none;
+    }
+    .list {
+      width: 100%;
+      box-sizing: border-box;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(450px, 1fr));
+      justify-content: center;
+      gap: 50px 150px;
+
+      .vacancy {
+        aspect-ratio: 3/4;
+        border-radius: 50px;
+        padding: 35px;
+        box-sizing: border-box;
+        display: grid;
+        grid-template-rows: auto auto 1fr auto;
+        font-size: 1.5rem;
+        gap: 25px;
+        box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
+        background-color: white;
+        overflow: hidden;
+
+        .description {
+          align-self: flex-end;
+          margin-bottom: 15px;
+          font-weight: lighter;
+        }
+        .company {
+          font-weight: normal;
+        }
+        h2 {
+          font-size:3rem;
+          width: 100%;
+          overflow: hidden;
+          word-wrap: normal;
+          font-family: coconat;
+        }
+        .linkToWebpage {
+          text-decoration: none;
+          color: black;
+          border: 1px solid black;
+          padding: 10px 50px 10px 30px;
+          border-radius: 50px;
+          position: relative;
+          box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.7);
+          transition: box-shadow .5s, background-color .5s, border-color .5s;
+      
+          &:hover {
+            box-shadow: unset;
+            border-color: transparent;
+            background-color: #F0A71E;
+          }
+          &::after {
+            content: ">";
+            position: absolute;
+            right: 15px;
+            top: 2px;
+            font-size: 40px;
+            font-weight: 100;
+          }
+        }
+      }
+    }
+    @media (max-width: 1050px) {
+      .list {
+        .vacancy {
+          aspect-ratio: 4/2;
+        }
+      }
+    }
+  }
+}

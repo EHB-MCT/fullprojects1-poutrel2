@@ -1,0 +1,90 @@
+.no-scroll {
+  overflow: hidden;
+}
+header {
+  .header {
+    display: grid;
+    grid-template-columns: 2fr 2fr 3fr 2fr 2fr;
+    align-items: end;
+    width: 100vw;
+    position: relative;
+  }
+  img {
+    margin-top: 40px;
+  }
+}
+.canvasMain1 {
+  display: flex;
+  position: relative;
+  background-image: url(images/home/_MG_9667.jpg);
+  background-position: 0 110px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  
+  div {
+    position: absolute;
+    bottom: 25%;
+    right: 10%;
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    align-items: end;
+
+    span {
+      font-size: 3vw;
+      font-family: coconat;
+      color: white;
+      text-shadow: 5px 10px 10px black;
+      z-index: 1;
+      position: relative;
+    }
+    span:first-of-type::before,
+    span:first-of-type::after {
+      content: "";
+      position: absolute;
+      border-radius: 50%;
+      z-index: -1;
+      aspect-ratio: 1/1;
+    }
+    span:first-of-type::after {
+      width: 5vw;
+      top: -1vw;
+      background-color: #2C463F;
+      left: -2vw;
+    }
+    span:first-of-type::before {
+      width: 2vw;
+      top: -2.5vw;
+      background-color: orange;
+      left: 2.5vw;
+    }
+    button {
+      padding: 10px 50px;
+      border-radius: 15px;
+      outline: unset;
+      border: unset;
+      background-color: red;
+      color: white;
+      font-weight: 400;
+      font-size: 2vw;
+      width: fit-content;
+      margin-top: 10px;
+      z-index: 1;
+      position: relative;
+
+      &::after {
+        content: "";
+        position: absolute;
+        border-radius: 50%;
+        aspect-ratio: 1/1;
+      }
+      &::after {
+        width: 2vw;
+        top: -1vw;
+        background-color: #053447;
+        right: -1vw;
+      }
+    }
+  }
+}
+

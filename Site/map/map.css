@@ -1,0 +1,263 @@
+.map {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 0 0 0 70px;
+  box-sizing: border-box;
+
+  .info {
+    width: 330px;
+    height: 500px;
+    align-self: center;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 50px;
+    box-shadow: 4px 4px 8px 0 rgba(0, 0, 0, 0.5);
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: 1;
+
+    .infospanmap {
+      font-size: 40px;
+      text-align: center;
+      padding: 0 50px;
+    }
+  }
+  .houses.grid {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+    align-items: center;
+    background-image: url(../images/map/map.png);
+    background-repeat: no-repeat;
+    background-position: 100% center;
+    background-size: cover;
+
+    .house {
+      all: unset;
+      justify-self: center;
+      cursor: pointer;
+      transition: transform .5s;
+
+      &:hover {
+        transform: scale(1.25);
+      }
+      .head {
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: red;
+      }
+      .body {
+        width: 20px;
+        height: 25px;
+        border-radius: 10px 10px 0 0;
+        background-color: red;
+        margin-top: -2px;
+      }
+      &.luca {
+        grid-column: 8/9;
+        grid-row: 6/7;
+
+        .head,
+        .body {
+          background-color: #400026;
+        }
+      }
+      &.cosmos {
+        grid-column: 5/6;
+        grid-row: 8/9;
+
+        .head,
+        .body {
+          background-color: #400026;
+        }
+      }
+      &.anker {
+        grid-column: 7/8;
+        grid-row: 6/7;
+
+        .head,
+        .body {
+          background-color: #A4CD39;
+        }
+      }
+      &.miro {
+        grid-column: 6/7;
+        grid-row: 9/10;
+
+        .head,
+        .body {
+          background-color: #659ABF;
+        }
+      }
+      &.harmonie {
+        grid-column: 8/9;
+        grid-row: 5/6;
+
+        .head,
+        .body {
+          background-color: #E96642;
+        }
+      }
+      &.forum {
+        grid-column: 7/8;
+        grid-row: 7/8;
+
+        .head,
+        .body {
+          background-color: #F8981D;
+        }
+      }
+      &.vives {
+        grid-column: 2/3;
+        grid-row: 9/10;
+
+        .head,
+        .body {
+          background-color: #000000;
+        }
+      }
+      &.bricoteam {
+        grid-column: 9/10;
+        grid-row: 5/6;
+
+        .head,
+        .body {
+          background-color: #FF0000;
+        }
+      }
+    }
+  }
+}
+.info {
+  .infoCard[style*="grid"] ~ .infospanmap {
+    display: none;
+  }
+  .infoCard {
+    display: grid;
+    grid-template-rows: 1fr 4fr 1fr 1fr 1fr;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    position: relative;
+  
+    .linkToWebpage {
+      text-decoration: none;
+      color: black;
+      border: 1px solid black;
+      padding: 10px 50px 10px 30px;
+      border-radius: 50px;
+      position: relative;
+  
+      &::after {
+        content: ">";
+        position: absolute;
+        right: 10px;
+        top: 2px;
+        font-size: 32px;
+        font-weight: 200;
+      }
+    }
+    .adress {
+      display: flex;
+      flex-direction: column;
+    }
+    .person {
+      position: absolute;
+      top: -30px;
+      left: -30px;
+      .head {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        background-color: red;
+      }
+      .body {
+        width: 70px;
+        height: 70px;
+        margin-left: -5px;
+        border-radius: 100px 100px 0 0;
+        background-color: red;
+        margin-top: -2px;
+      }
+    }
+  }
+  #luca {
+    .head,
+    .body {
+      background-color: #400026;
+    }
+  }
+  #cosmos {
+    .head,
+    .body {
+      background-color: #400026;
+    }
+  }
+  #anker {
+    .head,
+    .body {
+      background-color: #A4CD38;
+    }
+  }
+  #miro {
+    .head,
+    .body {
+      background-color: #A4CD39;
+    }
+  }
+  #harmonie {
+    .head,
+    .body {
+      background-color: #E96642;
+    }
+  }
+  #forum {
+    .head,
+    .body {
+      background-color: #F8981D;
+    }
+  }
+  #vives {
+    .head,
+    .body {
+      background-color: #000000;
+    }
+  }
+  #bricoteam {
+    .head,
+    .body {
+      background-color: #FF0000;
+    }
+  }
+}
+.title {
+  position: absolute;
+  top: 50px;
+  left: calc(50% - 60px);
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -25px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #F0A71E;
+    z-index: 1;
+  }
+  h2 {
+    z-index: 5;
+    position: relative;
+  }
+}

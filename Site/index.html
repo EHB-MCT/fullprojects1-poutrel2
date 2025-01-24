@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Home | Poutrel</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/base-layout.css">
+  <link rel="stylesheet" href="css/buttons.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/typo.css">
+  <link rel="icon" type="image/x-icon" href="images/favicon.svg">
+  <script src="functions.js"></script>
+</head>
+<body onload="drawMainPage()" onresize="drawMainPage()" class="tk-tenon no-scroll">
+  <header>
+    <div class="header main">
+      <a href="#partners">partners</a>
+      <a href="about/">about</a>
+      <a class="img">
+        <img src="images/logos/poutrel_logo.png" alt="Poutrel logo">
+      </a>
+      <a href="map/">locaties</a>
+      <a href="jobs/">jobs</a>
+      <div class="languages">
+        <a>FR</a>
+        <a>NL</a>
+      </div>
+    </div>
+  </header>
+  <div class="wrapper">
+    <div class="canvasMain1">
+      <canvas id="canvas1"></canvas>
+      <div>
+        <span>Wij zijn allemaal mensen.</span>
+        <span>We zijn gelijkwaardig.</span>
+        <button onclick="location.href='jobs/'">Leer ons kennen!</button>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

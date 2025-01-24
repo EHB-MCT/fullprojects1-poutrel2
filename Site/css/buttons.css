@@ -1,0 +1,31 @@
+header {
+  a:not(.img) {
+    position: relative;
+    width: fit-content;
+    justify-self: center;
+    transition: color .5s;
+    color: black;
+    text-decoration: none;
+    font-size: 24px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      background-color: black;
+      bottom: 0;
+      left: 50%;
+      height: 2px;
+      width: 0;
+      transition: width .5s, left .5s;
+    }
+    &.active,
+    &:hover {
+      color: #DC1F26;
+
+      &::after {
+        width: 50%;
+        left: 25%;
+      }
+    }
+  }
+}

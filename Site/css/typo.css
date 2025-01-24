@@ -1,0 +1,15 @@
+@import url("https://use.typekit.net/tsf7ttw.css");
+@font-face {
+  font-family: "coconat";
+  src: url("../fonts/Coconat-Regular.woff") format('woff'), 
+      url("../fonts/Coconat-Regular.woff2") format('woff2');
+  font-weight: bold;
+  font-style: italic;
+}
+body {
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1.1rem;
+  color: black;
+}

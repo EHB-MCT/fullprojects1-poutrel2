@@ -12,30 +12,112 @@
   <script src="functions.js"></script>
 </head>
 <body onload="drawMainPage()" onresize="drawMainPage()" class="tk-tenon no-scroll">
-  <header>
-    <div class="header main">
-      <a href="#partners">partners</a>
-      <a href="about/">about</a>
-      <a class="img">
-        <img src="images/logos/poutrel_logo.png" alt="Poutrel logo">
-      </a>
-      <a href="map/">locaties</a>
-      <a href="jobs/">jobs</a>
-      <div class="languages">
-        <a>FR</a>
-        <a>NL</a>
-      </div>
-    </div>
-  </header>
   <div class="wrapper">
-    <div class="canvasMain1">
-      <canvas id="canvas1"></canvas>
-      <div>
-        <span>Wij zijn allemaal mensen.</span>
-        <span>We zijn gelijkwaardig.</span>
-        <button onclick="location.href='jobs/'">Leer ons kennen!</button>
+    <div class="slides">
+      <div class="slide slide1">
+        <div class="canvasMain1">
+          <header class="non-sticky">
+            <div class="header main">
+              <a href="#partners">partners</a>
+              <a href="#about">about</a>
+              <a class="img">
+                <img src="images/logos/poutrel_logo.png" alt="Poutrel logo">
+              </a>
+              <a href="map/">locaties</a>
+              <a href="jobs/">jobs</a>
+              <div class="languages">
+                <a>FR</a>
+                <a>NL</a>
+              </div>
+            </div>
+          </header>
+          <canvas id="canvas1"></canvas>
+          <div class="text">
+            <span>Wij zijn allemaal mensen.</span>
+            <span>We zijn gelijkwaardig.</span>
+            <button onclick="location.href='jobs/'">Leer ons kennen!</button>
+          </div>
+        </div>
+      </div>
+      <div class="slide slide2">
+        <div class="inner">
+          <div class="about">
+            <header>
+              <input id="header-collapsible" class="toggle" type="checkbox">
+              <label for="header-collapsible" class="lbl-toggle">
+                <div class="l1 line"></div>
+                <div class="l2 line"></div>
+                <div class="l3 line"></div>
+              </label>
+              <div class="header other">
+                <a href="../" class="img">
+                  <img src="images/logos/poutrel_logo.png" alt="Poutrel logo">
+                </a>
+                <div class="links">
+                  <a>partners</a>
+                  <a href="../about/">about</a>
+                  <a href="../map/">locations</a>
+                  <a href="../jobs/">jobs</a>
+                </div>
+                <div class="languages">
+                  <a>FR</a>
+                  <a>NL</a>
+                </div>
+            </header>
+            <div class="about-content">
+              <div class="background">
+                <img src="images/about/Poutrel_final_about.png" alt="Achtergrondafbeelding">
+              </div>
+              <section class="sections">
+                <!-- Over ons sectie -->
+                <div class="about-section">
+                  <h1>Wat is Poutrel?</h1>
+                  <p>POUTREL is een overkoepelende vakbond <br>die 4 sociale organisaties in Brussel huisvest:</p>
+                  <ul>
+                    <li><b>Cosmos vzw</b>: Bestaande uit buurtrestaurant Cosmos en lokaal <br>dienstencentrum Vives.</li>
+                    <li><b>LD² vzw</b>: Bestaande uit buurtrestaurant Het Anker en lokaal<br> dienstencentrum Forum en Miro.</li>
+                    <li><b>Buurtwerk Noordwijk vzw</b>: Bestaande uit buurtrestaurant De Harmonie.</li>
+                    <li><b>Bricoteam vzw</b>: Algemene klussendienst.</li>
+                  </ul>
+                  <p>Deze 4 organisaties omvatten op hun beurt 6<br> verschillende buurtactiviteiten, verspreid over 8<br> locaties in Brussel. 
+                    Een dergelijke buurtactiviteit kan een restaurant of een lokaal <br> dienstencentrum zijn.</p>
+                </div>
+                
+                <!-- Missie sectie -->
+                <div class="mission-section">
+                  <h2>Wat is de missie van Poutrel?</h2>
+                  <p>De missie bestaat uit twee sociale pijlers:</p>
+                  <ol>
+                    <li>
+                      <b>Zorgzame en participatieve wijken</b> in Brussel opstarten, creëren en uitbouwen zodat iedereen succesvol oud kan worden en zo lang mogelijk in een aangename woonomgeving kan blijven wonen.
+                    </li>
+                    <li>
+                      <b>Het waarborgen van het recht</b> op fatsoenlijk werk door hoogwaardige professionele integratieprogramma's aan te bieden.
+                    </li>
+                  </ol>
+                  <p>POUTREL realiseert zijn missie via 6 buurtprojecten: Het Anker, Forum, Miro, De Harmonie, Cosmos en Vives in Brussel-Stad, Vorst en Anderlecht.</p>
+                </div>
+              
+                <!-- Promo video sectie -->
+                <div class="promo-video">
+                  <p>Promo video</p>
+                </div>
+              
+                <!-- Wij zijn een team -->
+                <div class="team-section">
+                  <h3>Wij zijn een team!</h3>
+                  <p>Neem contact met ons op</p>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="slide slide3">
+        <h1>Page3</h1>
       </div>
     </div>
+    
   </div>
 </body>
 </html>

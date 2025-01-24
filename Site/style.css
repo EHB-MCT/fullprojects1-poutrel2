@@ -1,16 +1,29 @@
 .no-scroll {
   overflow: hidden;
+  height: 100vw;
+}
+.non-sticky {
+  position: static;
 }
 header {
   .header {
     display: grid;
     grid-template-columns: 2fr 2fr 3fr 2fr 2fr;
-    align-items: end;
+    align-items: center;
     width: 100vw;
     position: relative;
   }
-  img {
-    margin-top: 40px;
+  .header.main {
+    .img {
+      max-height: unset;
+      width: 100%;
+
+      img {
+        max-height: unset;
+        width: 100%;
+        max-width: 650px;
+      }
+    }
   }
 }
 .canvasMain1 {
@@ -20,8 +33,13 @@ header {
   background-position: 0 110px;
   background-size: cover;
   background-repeat: no-repeat;
+  height: 100vh;
   
-  div {
+  canvas {
+    position: absolute;
+    inset: 0;
+  }
+  .text {
     position: absolute;
     bottom: 25%;
     right: 10%;
@@ -88,3 +106,107 @@ header {
   }
 }
 
+.about {
+  position: relative;
+
+  /* Zorg dat de afbeelding altijd de volledige breedte inneemt */
+  .background img {
+    display: block;
+    width: 100%; /* Neem de volledige breedte van de pagina */
+    height: auto; /* Behoud de verhoudingen van de afbeelding */
+  }
+
+  /* Algemeen voor de tekstsecties */
+  .sections {
+    position: absolute; /* Plaats deze sectie boven de achtergrond */
+    top: 0;
+    width: 100%;
+    height: 100%;
+    color: #fff; /* Witte tekst voor contrast */
+    padding: 20px;
+    border-radius: 10px; /* Rond de hoeken een beetje af */
+    box-sizing: border-box;
+    display: grid;
+    grid-template-areas: 
+                        " . about"
+                        " mission ."
+                        "video video";
+  }
+
+  /* Specifieke positionering */
+  .about-section {
+    grid-area: about;
+
+    /* Tekststijl */
+    font-size: 22px; /* Pas de tekstgrootte aan */
+    line-height: 1.5; /* Zorg voor ruimte tussen de regels */
+    font-weight: bold; /* Maak de tekst vetgedrukt */
+    color: #333; /* Pas de tekstkleur aan */
+  }
+
+  .mission-section {
+    grid-area: mission;
+
+    /* Tekststijl */
+    font-size: 26px; /* Iets kleinere tekst */
+    line-height: 1.8; /* Grotere regelafstand */
+    font-weight: normal; /* Normale tekstdikte */
+    color: #555; /* Iets lichtere kleur */
+  }
+  /* Promo video sectie */
+  .promo-video {
+    grid-area: video;
+    width: 63%;
+    aspect-ratio: 16/9;
+    align-self: self-end;
+    justify-self: center;
+    border: 2px solid #000;
+    background-color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  /* Team sectie */
+  .team-section {
+    text-align: center;
+    font-size: 34px;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .team-section h3 {
+    font-size: 34px;
+    color: #ffcc00;
+  }
+}
+.slides {
+  width: 100%;
+  height: 100vh;
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100vh;
+  scroll-snap-align: start;
+}
+.slide2 {
+  overflow: hidden scroll;
+  
+  .inner {
+    display: flex;
+    align-self: flex-start;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+}
+.slide3 {
+}

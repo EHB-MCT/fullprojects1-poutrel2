@@ -14,7 +14,7 @@ header {
     position: relative;
   }
   .header.main {
-    margin-top: 5vh;
+    margin-top: 4vh;
     .img {
       max-height: unset;
       width: 100%;
@@ -32,7 +32,7 @@ header {
   position: relative;
   background-image: url(images/home/home.jpeg);
   background-position: bottom;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
   

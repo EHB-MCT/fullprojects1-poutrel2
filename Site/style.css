@@ -1,6 +1,6 @@
 .no-scroll {
   overflow: hidden;
-  height: 100vw;
+  height: 100vh;
 }
 .non-sticky {
   position: static;
@@ -157,15 +157,15 @@ header {
     grid-area: mission;
 
     /* Tekststijl */
-    font-size: 26px; /* Iets kleinere tekst */
-    line-height: 1.8; /* Grotere regelafstand */
-    font-weight: normal; /* Normale tekstdikte */
-    color: #555; /* Iets lichtere kleur */
+    font-size: 1.8vw; /* Pas de tekstgrootte aan */
+    line-height: 1.5; /* Zorg voor ruimte tussen de regels */
+    font-weight: bold; /* Maak de tekst vetgedrukt */
+    color: #333; /* Pas de tekstkleur aan */
   }
   /* Promo video sectie */
   .promo-video {
     grid-area: video;
-    width: 63%;
+    width: 65%;
     aspect-ratio: 16/9;
     align-self: self-end;
     justify-self: center;
@@ -179,23 +179,87 @@ header {
     color: #333;
   }
 
-  /* Team sectie */
-  .team-section {
-    text-align: center;
-    font-size: 34px;
-    font-weight: bold;
-    color: #333;
-  }
-
   .team-section h3 {
     font-size: 34px;
     color: #ffcc00;
   }
 }
+/* Team sectie */
+.team-section {
+  text-align: center;
+  font-size: 34px;
+  font-weight: bold;
+  color: #333;
+  position: relative;
+
+  .content {
+    position: absolute;
+    inset: 0;
+    padding: 50px;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    align-items: center;
+
+    .partners {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      max-width: 1600px;
+      margin: 0 auto;
+      height: fit-content;
+      box-sizing: border-box;
+      align-items: center;
+      
+      & > div {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+        justify-content: space-between;
+        align-items: center;
+        height: 100%;
+      }
+      a {
+        font-size: 20px;
+        text-decoration: none;
+        color: white;
+        border: 1px solid white;
+        padding: 10px 50px 10px 20px;
+        border-radius: 50px;
+        position: relative;
+
+        &::after {
+          content: ">";
+          position: absolute;
+          right: 10px;
+          top: 5px; 
+          font-size: 32px;
+          font-weight: 200;
+        }
+      }
+    }
+    h3 {
+      margin: 0;
+      font-size: 3.5vw;
+    }
+    span {
+      font-size: 2.5vw;
+    }
+  }
+  .background {
+    position: relative;
+    height: 100vh;
+    display: flex;
+
+    img {
+      align-self: end;
+      display: block;
+    }
+  }
+}
 .slides {
   width: 100%;
   height: 100vh;
-  overflow-y: scroll;
+  overflow: hidden scroll;
   scroll-snap-type: y mandatory;
 }
 .slide {

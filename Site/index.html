@@ -8,19 +8,19 @@
   <link rel="stylesheet" href="css/buttons.css">
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/typo.css">
-  <link rel="icon" type="image/x-icon" href="images/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="images/logos/favicon.svg">
   <script src="functions.js"></script>
 </head>
 <body onload="drawMainPage()" onresize="drawMainPage()" class="tk-tenon no-scroll">
   <div class="wrapper">
     <div class="slides">
-      <div class="slide slide1">
+      <div class="slide slide1" id="main">
         <div class="canvasMain1">
           <header class="non-sticky">
             <div class="header main">
               <a href="#partners">partners</a>
               <a href="#about">about</a>
-              <a class="img">
+              <a class="img" href="#main">
                 <img src="images/logos/poutrel_logo.png" alt="Poutrel logo">
               </a>
               <a href="map/">locaties</a>
@@ -39,7 +39,7 @@
           </div>
         </div>
       </div>
-      <div class="slide slide2">
+      <div class="slide slide2" id="about">
         <div class="inner">
           <div class="about">
             <header>
@@ -50,14 +50,14 @@
                 <div class="l3 line"></div>
               </label>
               <div class="header other">
-                <a href="../" class="img">
+                <a href="#main" class="img">
                   <img src="images/logos/poutrel_logo.png" alt="Poutrel logo">
                 </a>
                 <div class="links">
-                  <a>partners</a>
-                  <a href="../about/">about</a>
-                  <a href="../map/">locations</a>
-                  <a href="../jobs/">jobs</a>
+                  <a href="#partners">partners</a>
+                  <a href="#about">about</a>
+                  <a href="map/">locations</a>
+                  <a href="jobs/">jobs</a>
                 </div>
                 <div class="languages">
                   <a>FR</a>
@@ -66,7 +66,7 @@
             </header>
             <div class="about-content">
               <div class="background">
-                <img src="images/about/Poutrel_final_about.png" alt="Achtergrondafbeelding">
+                <img src="images/about/main.png" alt="Achtergrondafbeelding">
               </div>
               <section class="sections">
                 <!-- Over ons sectie -->
@@ -107,11 +107,36 @@
           </div>
         </div>
       </div>
-      <div class="slide slide3">
+      <div class="slide slide3" id="partners">
         <!-- Wij zijn een team -->
         <div class="team-section">
-          <h3>Wij zijn een team!</h3>
-          <p>Neem contact met ons op</p>
+          <div class="background">
+            <img src="images/about/footer.png" alt="Achtergrondafbeelding">
+          </div>
+          <div class="content">
+            <div class="catchphrase">
+              <h3>Wij zijn een team!</h3>
+              <span>Neem contact met ons op</span>
+            </div>
+            <div class="partners">
+              <div>
+                <img src="images/about/brico.png" alt="Bricoteam Logo White">
+                <a href="">Meer informatie</a>
+              </div>
+              <div>
+                <img src="images/about/anker.png" alt="Het Anker Logo White">
+                <a href="">Meer informatie</a>
+              </div>
+              <div>
+                <img src="images/about/cosmos.png" alt="Cosmos Logo White">
+                <a href="">Meer informatie</a>
+              </div>
+              <div>
+                <img src="images/about/brico.png" alt="Bricoteam Logo White">
+                <a href="">Meer informatie</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

@@ -270,7 +270,8 @@ header {
     .partners {
       display: grid;
       grid-template-columns: 1fr 1fr 1fr 1fr;
-      max-width: 1600px;
+      max-width: 2000px;
+      gap: 6vw;
       margin: 0 auto;
       height: fit-content;
       box-sizing: border-box;
@@ -285,8 +286,14 @@ header {
         align-items: center;
         height: 100%;
       }
+      .cosmos {
+        img {
+          margin-top: 2vw;
+        }
+      }
       a {
-        font-size: 20px;
+        font-size: 1.1vw;
+        font-weight: 400;
         text-decoration: none;
         color: white;
         border: 1px solid white;
@@ -296,23 +303,52 @@ header {
         transition: background-color .5s, border-color .5s;
 
         &::after {
-          content: ">";
-          position: absolute;
+          content: "";
+          display: block;
+          width: 0.8vw;
+          height: 0.8vw;
+          font-size: 2.4vw;
+          line-height: 0;
+          top: 50%;
+          transform: translateY(-50%);
           right: 10px;
-          top: 5px; 
-          font-size: 32px;
+          position: absolute;
           font-weight: 200;
+          background-image: url(images/about/arrow.png);
+          background-size: contain;
+          filter: invert(1);
         }
         &:hover {
           border-color: transparent;
-          background-color: #F0A71E;
+          background-color: #DC1F26;
         }
       }
+    }
+    .catchphrase {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
     }
     h3 {
       margin: 0;
       font-size: 3.5vw;
       font-family: coconat;
+      width: fit-content;
+      align-self: center;
+      position: relative;
+      z-index: 1;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -3vw;
+        left: -3vw;
+        width: 7vw;
+        height: 7vw;
+        background-color: #F0A71E;
+        border-radius: 100vw;
+        z-index: -1;
+      }
     }
     span {
       font-size: 2.2vw;
@@ -322,6 +358,7 @@ header {
   .background {
     position: relative;
     height: 100vh;
+    width: 100vw;
     display: flex;
 
     img {

@@ -40,6 +40,7 @@ header {
   width: 0;
   height: 0;
   width: 100vw;
+  height: fit-content;
   z-index: 10;
 
   input {
@@ -97,7 +98,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 100px;
+    gap: 10vw;
     flex: 0 0 40%;
     width: fit-content;
   }
@@ -116,6 +117,8 @@ header {
     grid-template-columns: 1fr 4fr 1fr;
     justify-items: center;
     align-items: center;
+    padding: 15px;
+    box-shadow: 0 0 15px black;
 
     & > * {
       order: 2;
@@ -126,6 +129,15 @@ header {
     .img,
     img {
       margin: 0;
+      margin-left: 25px;
+    }
+    .languages {
+      position: relative;
+      margin: 0;
+      top: unset;
+      right: unset;
+      align-self: center;
+      justify-self: center;
     }
   }
   .languages {
@@ -136,8 +148,11 @@ header {
     position: absolute;
     top: 10px;
     right: 20px;
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
 
-    a {
+    a:not(.img) {
       &:hover {
         color: #F0A71E;
       }

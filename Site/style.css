@@ -8,12 +8,13 @@
 header {
   .header {
     display: grid;
-    grid-template-columns: 2fr 2fr 3fr 2fr 2fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
     align-items: center;
     width: 100vw;
     position: relative;
   }
   .header.main {
+    margin-top: 5vh;
     .img {
       max-height: unset;
       width: 100%;
@@ -29,9 +30,9 @@ header {
 .canvasMain1 {
   display: flex;
   position: relative;
-  background-image: url(images/home/_MG_9667.jpg);
-  background-position: 0 110px;
-  background-size: cover;
+  background-image: url(images/home/home.jpeg);
+  background-position: bottom;
+  background-size: contain;
   background-repeat: no-repeat;
   height: 100vh;
   
@@ -41,7 +42,7 @@ header {
   }
   .text {
     position: absolute;
-    bottom: 25%;
+    bottom: 30%;
     right: 10%;
     display: flex;
     flex-direction: column;
@@ -77,18 +78,19 @@ header {
       left: 2.5vw;
     }
     button {
-      padding: 10px 50px;
-      border-radius: 15px;
+      padding: 20px 100px;
+      border-radius: 30px;
       outline: unset;
       border: unset;
       background-color: red;
       color: white;
       font-weight: 400;
-      font-size: 2vw;
+      font-size: 1.5vw;
       width: fit-content;
       margin-top: 10px;
       z-index: 1;
       position: relative;
+      margin-top: 50px;
 
       &::after {
         content: "";
@@ -121,6 +123,23 @@ header {
 
   .about-content {
     position: relative;
+
+    h1 {
+      position: relative;
+      z-index: 1;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -0.5vw;
+        left: -1.5vw;
+        width: 5vw;
+        height: 5vw;
+        background-color: #DC1F26;
+        border-radius: 100vw;
+        z-index: -1;
+      }
+    }
   }
   /* Algemeen voor de tekstsecties */
   .sections {
@@ -130,10 +149,11 @@ header {
     height: 100%;
     color: #fff; /* Witte tekst voor contrast */
     padding: 20px;
+    padding-top: 8vw;
     border-radius: 10px; /* Rond de hoeken een beetje af */
     box-sizing: border-box;
     display: grid;
-    gap: 0 6vw;
+    gap: 0 0.3vw;
     grid-template-areas: 
                         " . about"
                         " mission ."
@@ -143,24 +163,75 @@ header {
   }
 
   /* Specifieke positionering */
+  .mission-section,
   .about-section {
     grid-area: about;
+    margin-left: 4vw;
 
     /* Tekststijl */
-    font-size: 1.8vw; /* Pas de tekstgrootte aan */
+    font-size: 1.4vw; /* Pas de tekstgrootte aan */
     line-height: 1.5; /* Zorg voor ruimte tussen de regels */
-    font-weight: bold; /* Maak de tekst vetgedrukt */
+    font-weight: regular; /* Maak de tekst vetgedrukt */
     color: #333; /* Pas de tekstkleur aan */
+
+    .company-list {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 2vw;
+
+      b {
+        font-family: coconat;
+        font-size: 2vw;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+          content: "";
+          position: absolute;
+          top: 0vw;
+          left: -1vw;
+          width: 2vw;
+          height: 2vw;
+          background-color: #F0A71E;
+          border-radius: 100vw;
+          z-index: -1;
+        }
+      }
+    }
+    h1 + p {
+      font-size: 1.6vw;
+    }
+    p:last-child {
+      margin-right: 200px;
+    }
   }
 
   .mission-section {
     grid-area: mission;
+    margin-left: 12vw;
 
-    /* Tekststijl */
-    font-size: 1.8vw; /* Pas de tekstgrootte aan */
-    line-height: 1.5; /* Zorg voor ruimte tussen de regels */
-    font-weight: bold; /* Maak de tekst vetgedrukt */
-    color: #333; /* Pas de tekstkleur aan */
+    span {
+      font-weight: 300;
+    }
+
+    ol li {
+      position: relative;
+      z-index: 1;
+
+      &::after {
+        content: "";
+        position: absolute;
+        top: -0.5vw;
+        left: -2.5vw;
+        width: 2vw;
+        height: 2vw;
+        background-color: #F0A71E;
+        border-radius: 100vw;
+        z-index: -1;
+      }
+    }
   }
   /* Promo video sectie */
   .promo-video {
@@ -178,11 +249,6 @@ header {
     font-weight: bold;
     color: #333;
   }
-
-  .team-section h3 {
-    font-size: 34px;
-    color: #ffcc00;
-  }
 }
 /* Team sectie */
 .team-section {
@@ -198,6 +264,7 @@ header {
     padding: 50px;
     display: grid;
     grid-template-rows: 1fr 2fr;
+    gap: 100px;
     align-items: center;
 
     .partners {
@@ -226,6 +293,7 @@ header {
         padding: 10px 50px 10px 20px;
         border-radius: 50px;
         position: relative;
+        transition: background-color .5s, border-color .5s;
 
         &::after {
           content: ">";
@@ -235,14 +303,20 @@ header {
           font-size: 32px;
           font-weight: 200;
         }
+        &:hover {
+          border-color: transparent;
+          background-color: #F0A71E;
+        }
       }
     }
     h3 {
       margin: 0;
       font-size: 3.5vw;
+      font-family: coconat;
     }
     span {
-      font-size: 2.5vw;
+      font-size: 2.2vw;
+      font-weight: 400;
     }
   }
   .background {

@@ -20,25 +20,27 @@ function drawMainPage() {
 
   context.clearRect(0,0, width, height)
   context.fillStyle = "#F9F8F3";
-  context.beginPath();
-  context.arc(width/6-width/12, 100, width/10, 0, Math.PI*2);
-  context.arc(width/3-width/12, 100, width/10, 0, Math.PI*2);
-  context.arc(width/2-width/12, 100, width/10, 0, Math.PI*2);
-  context.arc(width/6*4-width/12, 100, width/10, 0, Math.PI*2);
-  context.arc(width/6*5-width/12, 100, width/10, 0, Math.PI*2);
-  context.arc(width-width/12, 100, width/10, 0, Math.PI*2);
-  context.fill();
-  drawPerson((width/36)/5*6, 3, width/36, "#2C463F");
-  drawPerson((width/36)/5*6, 2, width/36, "white");
-  drawPerson((width/36)/5*6, 1, width/36, "black");
-  drawPerson((width/36)/5*6*3, 2.2, width/36, "orange");
-  drawPerson((width/36)/5*6*3, 1.2, width/36, "#053447");
-  drawPerson((width/36)/5*6*5, 1.4, width/36, "red");
-  context.beginPath();
-  context.fillStyle =  "white";
-  context.arc(width/10*9 + width/35, height/6*4-height/100, width/75, 0, Math.PI*2)
-  context.fill();
-  drawLines(width/10*9 + width/35, height/6*4-height/100, width/75, "black")
+  // context.beginPath();
+  // context.arc(width/6-width/12, 100, width/10, 0, Math.PI*2);
+  // context.arc(width/3-width/12, 100, width/10, 0, Math.PI*2);
+  // context.arc(width/2-width/12, 100, width/10, 0, Math.PI*2);
+  // context.arc(width/6*4-width/12, 100, width/10, 0, Math.PI*2);
+  // context.arc(width/6*5-width/12, 100, width/10, 0, Math.PI*2);
+  // context.arc(width-width/12, 100, width/10, 0, Math.PI*2);
+  // context.fill();
+  // drawPerson((width/36)/5*6, 3, width/36, "#2C463F");
+  // drawPerson((width/36)/5*6, 2, width/36, "white");
+  // drawPerson((width/36)/5*6, 1, width/36, "black");
+  // drawPerson((width/36)/5*6*3, 2.2, width/36, "orange");
+  // drawPerson((width/36)/5*6*3, 1.2, width/36, "#053447");
+  // drawPerson((width/36)/5*6*5, 1.4, width/36, "red");
+  // drawPerson(width-width/36*3-width/36*2/5, 1.2, width/36, "black");
+  // drawPerson(width-width/36, 1.6, width/36, "yellow");
+  // context.beginPath();
+  // context.fillStyle =  "white";
+  // context.arc(width/10*9 + width/35, height/6*4-height/100, width/75, 0, Math.PI*2)
+  // context.fill();
+  // drawLines(width/10*9 + width/35, height/6*4-height/100, width/75, "black")
 }
 
 /**

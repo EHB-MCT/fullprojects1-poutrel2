@@ -69,6 +69,18 @@
         background-color: white;
         overflow: hidden;
 
+        h3 {
+          margin: 0;
+        }
+        .stage {
+          color: orange;
+        }
+        .vacancy-job {
+          color: lightblue;
+        }
+        .volonteer {
+          color: green;
+        }
         .description {
           align-self: flex-end;
           margin-bottom: 15px;

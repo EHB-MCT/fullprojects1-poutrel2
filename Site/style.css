@@ -14,7 +14,7 @@ header {
     position: relative;
   }
   .header.main {
-    margin-top: 4vh;
+    margin-top: 2vh;
     .img {
       max-height: unset;
       width: 100%;

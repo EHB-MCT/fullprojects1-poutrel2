@@ -64,6 +64,7 @@ header {
       height: fit-content;
       font-size: 1.5vw;
     }
+    a,
     button {
       background-color: white;
       border: 2px solid black;
@@ -73,6 +74,8 @@ header {
       position: relative;
       font-size: 1.5vw;
       height: fit-content;
+      text-decoration: none;
+      color: black;
       transition: border-color .5s, background-color .5s, color .5s;
 
       &:after {
@@ -94,6 +97,7 @@ header {
       &:hover {
         background-color: #DC1F26;
         border-color: transparent;
+        color: white;
       }
     }
     .send {
@@ -105,6 +109,7 @@ header {
       &:hover {
         background-color: white;
         border-color: black;
+        color: black;
       }
       &::after {
         display: none;

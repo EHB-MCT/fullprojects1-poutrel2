@@ -116,9 +116,9 @@ function createCircle(className, parentSelector, styles) {
 let lastShownInfoName;
 
 function mapShowInfo(name) {
-  document.getElementById(name).style.display = "grid";
   if (lastShownInfoName != undefined) {
     document.getElementById(lastShownInfoName).style.display = "none";
   }
+  document.getElementById(name).style.display = "flex";
   lastShownInfoName = name;
 }

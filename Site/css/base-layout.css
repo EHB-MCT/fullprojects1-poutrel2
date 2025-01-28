@@ -98,7 +98,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 10vw;
+    gap: 8vw;
     flex: 0 0 40%;
     width: fit-content;
   }
@@ -117,7 +117,7 @@ header {
     grid-template-columns: 1fr 4fr 1fr;
     justify-items: center;
     align-items: center;
-    padding: 15px;
+    padding: 5px;
     box-shadow: 0 0 15px black;
 
     & > * {
@@ -129,7 +129,7 @@ header {
     .img,
     img {
       margin: 0;
-      margin-left: 25px;
+      margin-left: 1vw;
     }
     .languages {
       position: relative;

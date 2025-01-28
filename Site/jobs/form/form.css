@@ -1,0 +1,126 @@
+header {
+  height: 0 !important;
+}
+.form {
+  height: 100%;
+  position: relative;
+
+
+  .ball {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: unset;
+    width: 10vw;
+  }
+  .form-job {
+    padding-right: 6vw;
+    padding-top: 6vw;
+  }
+  .motivation {
+    text-align: center;
+    padding-right: 10vw;
+    padding-top: 9vw;
+    
+    h2 {
+      font-size: 2.4vw;
+    }
+    span {
+      font-size: 1.5vw;
+    }
+  }
+  & > div {
+    width: 100%;
+    position: absolute;
+    padding-top: 110px;
+    box-sizing: border-box;
+    inset: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    & > div {
+      display: flex;
+      flex-direction: column;
+      padding: 2vw;
+      gap: 1vw;
+
+      & > div {
+        display: flex;
+        gap: 1vw;
+        flex-direction: row;
+      }
+    }
+    .upload {
+      justify-content: space-between;
+    }
+    textarea,
+    input[type="text"] {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 1vw 1vw;
+      border-radius: 1vw;
+      outline: unset;
+      border: 2px solid black;
+      height: fit-content;
+      font-size: 1.5vw;
+    }
+    button {
+      background-color: white;
+      border: 2px solid black;
+      padding: 0.5vw 1.5vw 0.5vw 3vw;
+      width: fit-content;
+      border-radius: 1vw;
+      position: relative;
+      font-size: 1.5vw;
+      height: fit-content;
+      transition: border-color .5s, background-color .5s, color .5s;
+
+      &:after {
+        content: "";
+        display: block;
+        width: 1vw;
+        height: 1vw;
+        font-size: 2.4vw;
+        line-height: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        left: 12px;
+        position: absolute;
+        font-weight: 200;
+        background-image: url(../../images/about/arrow-inverted.png);
+        background-size: contain;
+        transition: filter .5s;
+      }
+      &:hover {
+        background-color: #DC1F26;
+        border-color: transparent;
+      }
+    }
+    .send {
+      background-color: #DC1F26;
+      border-color: transparent;
+      padding: 0.5vw 1.5vw 0.5vw 1.5vw;
+      color: white;
+
+      &:hover {
+        background-color: white;
+        border-color: black;
+      }
+      &::after {
+        display: none;
+      }
+    }
+    .CV {
+      padding: 0.5vw 1.5vw 0.5vw 1.5vw;
+
+      &::after {
+        display: none;
+      }
+    }
+  }
+  img {
+    display: block;
+    height: 100%;
+    width: unset;
+  }
+}

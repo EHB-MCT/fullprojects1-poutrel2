@@ -18,6 +18,7 @@ main {
 a {
   cursor: pointer;
 }
+video,
 img {
   width: 100%;
 }

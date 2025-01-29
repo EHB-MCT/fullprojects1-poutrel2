@@ -152,11 +152,5 @@ header {
     display: flex;
     flex-direction: row;
     gap: 15px;
-
-    a:not(.img) {
-      &:hover {
-        color: #F0A71E;
-      }
-    }
   }
 }

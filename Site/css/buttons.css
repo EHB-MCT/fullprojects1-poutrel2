@@ -30,4 +30,12 @@ header {
       }
     }
   }
+  .languages {
+    a:not(.img) {
+      &.active,
+      &:hover {
+        color: #F0A71E;
+      }
+    }
+  }
 }

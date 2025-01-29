@@ -12,20 +12,22 @@
 header {
   .header {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 2fr 1fr 1fr;
     align-items: center;
     width: 100vw;
     position: relative;
   }
   .header.main {
-    margin-top: 5vh;
+    padding-top: 5vh;
+    height: 130px;
+    box-sizing: border-box;
     .img {
       max-height: unset;
       width: 100%;
 
       img {
         max-height: unset;
-        width: 100%;
+        width: 66%;
         max-width: 650px;
       }
     }
@@ -205,7 +207,7 @@ header {
       }
     }
     h1 + p {
-      font-size: 1.6vw;
+      font-size: 1.5vw;
     }
     p:last-child {
       margin-right: 200px;

@@ -36,7 +36,7 @@ header {
 .canvasMain1 {
   display: flex;
   position: relative;
-  background-image: url(images/home/home.jpeg);
+  background-image: url(../images/home/home.jpeg);
   background-position: bottom;
   background-size: contain;
   background-repeat: no-repeat;
@@ -345,7 +345,7 @@ header {
           right: 10px;
           position: absolute;
           font-weight: 200;
-          background-image: url(images/about/arrow.png);
+          background-image: url(../images/about/arrow.png);
           background-size: contain;
           filter: invert(1);
         }

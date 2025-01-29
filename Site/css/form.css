@@ -90,7 +90,7 @@ header {
         left: 12px;
         position: absolute;
         font-weight: 200;
-        background-image: url(../../images/about/arrow-inverted.png);
+        background-image: url(../images/about/arrow-inverted.png);
         background-size: contain;
         transition: filter .5s;
       }

@@ -162,12 +162,37 @@ header {
     gap: 0 0.3vw;
     grid-template-areas: 
                         " . about"
-                        " mission ."
+                        " mission call"
                         "video video";
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr;
   }
 
+  .call-to-action {
+    grid-area: call;
+    justify-self: center;
+    align-self: flex-end;
+
+    a {
+      font-size: 3vw;
+      text-decoration: none;
+      color: white;
+      position: relative;
+      bottom: 7vw;
+      margin-left: 12vw;
+
+      &::after {
+        content: "";
+        position: absolute;
+        background-color: white;
+        bottom: 0;
+        left: 25%;
+        height: 2px;
+        width: 50%;
+        transition: width .5s, left .5s;
+      }
+    }
+  }
   /* Specifieke positionering */
   .mission-section,
   .about-section {

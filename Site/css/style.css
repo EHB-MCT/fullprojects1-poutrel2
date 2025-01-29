@@ -423,5 +423,8 @@ header {
     width: 100%;
   }
 }
-.slide3 {
+@media (max-width : 1000px) {
+  .canvasMain1 {
+    background-image: url(../images/home/Home_phone.png);
+  }
 }

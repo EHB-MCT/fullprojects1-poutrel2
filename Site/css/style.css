@@ -500,5 +500,25 @@ header {
     .about-section {
       font-size: 2vw;
     }
+    .call-to-action {
+      a {
+        font-size: 6vw;
+        bottom: 20vh;
+        margin: 0;
+      }
+    }
+  }
+  .team-section {
+    .content {
+      .partners {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+
+        img {
+          display: block !important;
+          max-width: 250px;
+        }
+      }
+    }
   }
 }

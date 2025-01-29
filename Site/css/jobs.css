@@ -5,6 +5,10 @@
   .imageJobs2,
   .imageJobs1 {
     width: 100vw;
+
+    img {
+      display: block;
+    }
   }
   .imageJobs2 {
     margin-top: -10vw;
@@ -76,6 +80,7 @@
     max-width: 2000px;
     margin: 0 auto;
     z-index: 1;
+    height: fit-content;
 
     h1 {
       font-size: 60px;
@@ -191,6 +196,29 @@
           aspect-ratio: 4/2;
         }
       }
+    }
+  }
+}
+@media (max-width: 1000px) {
+  .jobs {
+    margin: 0;
+
+    .imageJobs1 {
+      position: relative;
+      margin: 0;
+    }
+    .imageJobs2 {
+      div {
+        align-items: end;
+
+        a {
+          font-size: 3vw;
+          margin: 0 0 15vw 0;
+        }
+      }
+    }
+    .vacancies {
+      margin-top: -30vh;
     }
   }
 }

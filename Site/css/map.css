@@ -47,7 +47,7 @@
     flex: 0 0 auto;
 
     img {
-      display: block;
+      display: block !important;
       height: 100%;
       width: unset;
     }
@@ -204,7 +204,7 @@
       justify-content: center;
 
       img {
-        display: block;
+        display: block !important;
         height: fit-content;
       }
       .person {
@@ -342,5 +342,43 @@
   h2 {
     z-index: 5;
     position: relative;
+  }
+}
+@media (max-width: 1000px) {
+  .map {
+    display: grid;
+    grid-template-rows: 1fr auto;
+
+    .houses.grid {
+      img {
+        height: unset;
+        width: 100%;
+      }
+    }
+    .info {
+      h2 {
+        font-size: 5vw;
+      }
+      .infoCard {
+        max-width: 800px;
+        font-size: 3vw;
+      }
+      .title {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: 800px;
+        padding: 0 2vw;
+        box-sizing: border-box;
+
+        &::after {
+          width: 8vw;
+          height: 8vw;
+          left: -2vw;
+          top: -2vw;
+        }
+      }
+    }
   }
 }

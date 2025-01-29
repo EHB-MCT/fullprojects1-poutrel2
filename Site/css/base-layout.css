@@ -157,11 +157,13 @@ header {
 @media (max-width : 1000px) {
   .wrapper {
     overflow: hidden scroll;
+    height: 100%;
+    display: block;
   }
   .non-sticky,
   header {
     position: fixed;
-    height: fit-content;
+    height: 0;
     top: 0;
     left: 0;
 
@@ -193,6 +195,7 @@ header {
           align-self: self-start;
           max-height: unset;
           margin-left: -35px;
+          display: block !important;
         }
       }
       .links {

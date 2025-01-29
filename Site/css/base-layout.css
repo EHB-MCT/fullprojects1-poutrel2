@@ -27,10 +27,8 @@ h2 {
   margin: 0;
   font-family: coconat;
 }
-canvas {
-  height: 100vh;
-  width: 100vw;
-  line-height: 0;
+.phone {
+  display: none !important;
 }
 header {
   text-align: center;
@@ -49,16 +47,19 @@ header {
   }
   .lbl-toggle {
     position: absolute;
-    top: 20px;
-    left: 20px;
+    top: 0;
+    left: 0;
     width: 30px;
-    height: 22px;
+    height: 30px;
     z-index: 3;
     transition: left .5s;
+    padding: 30px 40px 40px 30px;
+    border-radius: 0 0 50px 0;
+    background-color: white;
     display: none;
 
     .line {
-      position: absolute;
+      position: relative;
       left: 0;
       width: 30px;
       height: 2px;
@@ -66,17 +67,16 @@ header {
       transition: transform .5s, opacity .5s;
     }
     .l1 {
-      top: 2px;
+      top: 4px;
     }
     .l2 {
       top: 10px;
     }
     .l3 {
-      top: 18px;
+      top: 16px;
     }
   }
   .toggle:checked + .lbl-toggle {
-    left: 350px;
     height: 30px;
 
     .l2 {
@@ -89,7 +89,7 @@ header {
       transform: translateY(-5px) rotate(-45deg);
     }
   }
-  .toggle:checked + .lbl-toggle + .header.other {
+  .toggle:checked + .lbl-toggle + .header {
     transform: translateX(0);
   }
   .header {
@@ -154,6 +154,75 @@ header {
     gap: 15px;
   }
 }
-@media (max-width : 768px) {
-  
+@media (max-width : 1000px) {
+  .wrapper {
+    overflow: hidden scroll;
+  }
+  .non-sticky,
+  header {
+    position: fixed;
+    height: fit-content;
+    top: 0;
+    left: 0;
+
+    .header.main,
+    .header.other,
+    .header {
+      padding: 5vw;
+      padding-top: calc(5vw + 50px);
+      transform: translateY(-200%);
+      transition: transform .5s;
+      display: flex;
+      flex-direction: column;
+      height: fit-content;
+      box-sizing: border-box;
+      align-items: flex-start;
+      gap: 10px;
+
+      & > * {
+        order: 2;
+      }
+      .img {
+        order: 1;
+        display: flex;
+        max-height: unset;
+        margin: 0;
+
+        img {
+          width: 40%;
+          align-self: self-start;
+          max-height: unset;
+          margin-left: -35px;
+        }
+      }
+      .links {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .languages {
+        top: unset;
+        bottom: 10px;
+        margin-top: unset;
+        margin-bottom: 10px;
+        align-self: flex-end;
+        position: absolute;
+
+        a {
+          font-size: 4vw;
+        }
+      }
+      a {
+        font-size: 5vw;
+      }
+    }
+    .lbl-toggle {
+      display: block;
+    }
+  }
+  img:not(.phone) {
+    display: none !important;
+  }
+  .phone {
+    display: block !important;
+  }
 }

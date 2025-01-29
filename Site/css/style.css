@@ -42,10 +42,6 @@ header {
   background-repeat: no-repeat;
   height: 100vh;
   
-  canvas {
-    position: absolute;
-    inset: 0;
-  }
   .text {
     position: absolute;
     bottom: 30%;
@@ -147,16 +143,16 @@ header {
       }
     }
   }
-  /* Algemeen voor de tekstsecties */
+  
   .sections {
-    position: absolute; /* Plaats deze sectie boven de achtergrond */
+    position: absolute;
     top: 0;
     width: 100%;
     height: 100%;
-    color: #fff; /* Witte tekst voor contrast */
+    color: #fff;
     padding: 20px;
     padding-top: 8vw;
-    border-radius: 10px; /* Rond de hoeken een beetje af */
+    border-radius: 10px;
     box-sizing: border-box;
     display: grid;
     gap: 0 0.3vw;
@@ -193,17 +189,16 @@ header {
       }
     }
   }
-  /* Specifieke positionering */
+  
   .mission-section,
   .about-section {
     grid-area: about;
     margin-left: 4vw;
 
-    /* Tekststijl */
-    font-size: 1.4vw; /* Pas de tekstgrootte aan */
-    line-height: 1.5; /* Zorg voor ruimte tussen de regels */
-    font-weight: regular; /* Maak de tekst vetgedrukt */
-    color: #333; /* Pas de tekstkleur aan */
+    font-size: 1.4vw;
+    line-height: 1.5;
+    font-weight: regular;
+    color: #333;
 
     .company-list {
       margin: 0;
@@ -425,6 +420,85 @@ header {
 }
 @media (max-width : 1000px) {
   .canvasMain1 {
-    background-image: url(../images/home/Home_phone.png);
+    position: absolute;
+    inset: 0;
+    background-image: unset;
+    height: 100%;
+    width: 100%;
+
+    .text {
+      right: 50%;
+      bottom: 25%;
+      transform: translateX(50%);
+      text-align: center;
+      align-items: center;
+      width: 60vw;
+
+      span {
+        font-size: 5vw;
+      }
+
+      button {
+        margin-top: 25px;
+      }
+    }
+  }
+  .slides {
+    scroll-snap-type: none;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden scroll;
+  }
+  .slide {
+    scroll-snap-align: unset;
+    height: fit-content;
+    position: relative;
+    flex: 1 0 auto;
+    overflow: hidden;
+
+    .background {
+      height: unset;
+    }
+  }
+  .slide2 header {
+    display: none;
+  }
+  .about {
+    width: 100%;
+
+    .sections {
+      position: static;
+      grid-template-areas: 
+                          "topimg"
+                          "about"
+                          "middleimg"
+                          "call"
+                          "mission"
+                          "video";
+      grid-template-columns: auto;
+      grid-template-rows: auto;
+      padding: 0;
+  
+      & > * {
+        margin: 0;
+      }
+      & > div:not(.promo-video) {
+        padding: 0 50px;
+
+        br {
+          display: none;
+        }
+        h1 {
+          font-size: 4vw;
+        }
+      }
+    }
+    .promo-video {
+      width: 100%;
+    }
+    .mission-section,
+    .about-section {
+      font-size: 2vw;
+    }
   }
 }

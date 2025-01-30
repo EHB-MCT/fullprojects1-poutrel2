@@ -429,7 +429,7 @@ header {
 
     .text {
       right: 50%;
-      bottom: 25%;
+      bottom: 10%;
       transform: translateX(50%);
       text-align: center;
       align-items: center;
@@ -440,7 +440,7 @@ header {
       }
 
       button {
-        margin-top: 450px;
+        margin-top: 15vh;
         font-size: 3vw;
       }
     }

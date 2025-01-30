@@ -59,7 +59,7 @@ header {
     box-shadow: 0 0 5px black;
     display: none;
     transition: box-shadow .5s;
-    display: flex;
+    display: none;
 
     .line {
       position: relative;
@@ -242,5 +242,10 @@ header {
   }
   .phone {
     display: block !important;
+  }
+  header {
+    .lbl-toggle {
+      display: flex;
+    }
   }
 }

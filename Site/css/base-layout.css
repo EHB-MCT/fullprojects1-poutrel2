@@ -59,6 +59,7 @@ header {
     box-shadow: 0 0 5px black;
     display: none;
     transition: box-shadow .5s;
+    display: flex;
 
     .line {
       position: relative;
@@ -78,10 +79,15 @@ header {
       top: 71px;
     }
     .logo {
+      max-height: 140px;
+      width: fit-content;
+      margin: 0 auto;
+      align-self: center;
+      position: static;
+      
       img {
         max-height: 140px;
         width: unset;
-        margin: 0 auto;
       }
     }
   }
@@ -228,7 +234,7 @@ header {
       }
     }
     .lbl-toggle {
-      display: block;
+      display: flex;
     }
   }
   img:not(.phone) {

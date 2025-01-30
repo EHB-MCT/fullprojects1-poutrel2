@@ -166,6 +166,44 @@ header {
     }
     .form-job {
       padding: 6vw;
+      gap: 3vw;
+
+      & > div {
+        gap: 3vw;
+      }
+      a,
+      button,
+      textarea,
+      input {
+        font-size: 3vw;
+        padding: 2vw;
+        border-radius: 3vw;
+        border: 4px solid black;
+      }
+      a {
+        padding: 2vw 3vw 2vw 5vw;
+
+        &::after {
+          width: 2vw;
+          height: 2vw;
+        }
+      }
+      a,
+      button {
+        &:hover {
+          border-color: transparent;
+        }
+      }
+      a:hover::after {
+        filter: invert(1);
+      }
+      .send {
+        border-color: transparent;
+
+        &:hover {
+          border-color: black;
+        }
+      }
     }
   }
 }

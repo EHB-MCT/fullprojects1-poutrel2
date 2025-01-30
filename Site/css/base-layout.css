@@ -49,14 +49,16 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    width: 30px;
-    height: 30px;
+    width: 100vw;
+    box-sizing: border-box;
+    height: 150px;
     z-index: 3;
     transition: left .5s;
-    padding: 30px 40px 40px 30px;
-    border-radius: 0 0 50px 0;
-    background-color: white;
+    padding: 0px 40px 0px 30px;
+    background-color: var(--main-bg);
+    box-shadow: 0 0 5px black;
     display: none;
+    transition: box-shadow .5s;
 
     .line {
       position: relative;
@@ -67,17 +69,24 @@ header {
       transition: transform .5s, opacity .5s;
     }
     .l1 {
-      top: 4px;
+      top: 59px;
     }
     .l2 {
-      top: 10px;
+      top: 65px;
     }
     .l3 {
-      top: 16px;
+      top: 71px;
+    }
+    .logo {
+      img {
+        max-height: 140px;
+        width: unset;
+        margin: 0 auto;
+      }
     }
   }
   .toggle:checked + .lbl-toggle {
-    height: 30px;
+    box-shadow: unset;
 
     .l2 {
       opacity: 0;
@@ -99,7 +108,7 @@ header {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    gap: 8vw;
+    gap: 6vw;
     flex: 0 0 40%;
     width: fit-content;
   }
@@ -163,7 +172,6 @@ header {
   .non-sticky,
   header {
     position: fixed;
-    height: 0;
     top: 0;
     left: 0;
 
@@ -171,7 +179,7 @@ header {
     .header.other,
     .header {
       padding: 5vw;
-      padding-top: calc(5vw + 50px);
+      padding-top: calc(5vw + 120px);
       transform: translateY(-200%);
       transition: transform .5s;
       display: flex;
@@ -189,6 +197,7 @@ header {
         display: flex;
         max-height: unset;
         margin: 0;
+        display: none;
 
         img {
           width: 40%;

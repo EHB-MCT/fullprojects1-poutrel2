@@ -21,6 +21,8 @@ header {
     padding-top: 5vh;
     height: 130px;
     box-sizing: border-box;
+    background-color: transparent;
+
     .img {
       max-height: unset;
       width: 100%;
@@ -38,7 +40,7 @@ header {
   position: relative;
   background-image: url(../images/home/home.jpeg);
   background-position: bottom;
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
   
@@ -116,11 +118,10 @@ header {
   header {
     height: fit-content;
   }
-  /* Zorg dat de afbeelding altijd de volledige breedte inneemt */
   .background img {
     display: block;
-    width: 100%; /* Neem de volledige breedte van de pagina */
-    height: auto; /* Behoud de verhoudingen van de afbeelding */
+    width: 100%;
+    height: auto;
   }
 
   .about-content {
@@ -439,9 +440,13 @@ header {
       }
 
       button {
-        margin-top: 25px;
+        margin-top: 450px;
+        font-size: 3vw;
       }
     }
+  }
+  header .header.main {
+    background-color: var(--main-bg);
   }
   .slides {
     scroll-snap-type: none;
@@ -454,7 +459,6 @@ header {
     height: fit-content;
     position: relative;
     flex: 1 0 auto;
-    overflow: hidden;
 
     .background {
       height: unset;
@@ -471,9 +475,9 @@ header {
       grid-template-areas: 
                           "topimg"
                           "about"
+                          "mission"
                           "middleimg"
                           "call"
-                          "mission"
                           "video";
       grid-template-columns: auto;
       grid-template-rows: auto;
@@ -483,28 +487,60 @@ header {
         margin: 0;
       }
       & > div:not(.promo-video) {
-        padding: 0 50px;
+        padding: 0 15vw 0 15vw;
 
-        br {
-          display: none;
-        }
         h1 {
+          font-size: 7vw;
+
+          &::after {
+            width: 10vw;
+            height: 10vw;
+            left: -3vw;
+          }
+          & + p {
+            font-size: 3.5vw;
+          }
+        }
+        b {
           font-size: 4vw;
+
+          &::after {
+            width: 4vw;
+            height: 4vw;
+            left: -1vw;
+          }
         }
       }
     }
     .promo-video {
       width: 100%;
+      margin-top: -24vh;
+      margin-bottom: 35vw;
     }
     .mission-section,
     .about-section {
-      font-size: 2vw;
+      font-size: 3vw;
+    }
+    .about-section {
+      margin-bottom: 10vw;
     }
     .call-to-action {
       a {
         font-size: 6vw;
-        bottom: 20vh;
+        bottom: 30vh;
         margin: 0;
+      }
+    }
+    .mission-section {
+      ol li {
+        &::after {
+          width: 4vw;
+          height: 4vw;
+          left: -5vw;
+        }
+      }
+      span {
+        font-weight: 400;
       }
     }
   }
@@ -513,10 +549,28 @@ header {
       .partners {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 1fr 1fr;
+        gap: 10vw;
 
         img {
           display: block !important;
           max-width: 250px;
+        }
+      }
+      .catchphrase {
+        margin-top: -15vh;
+
+        h3 {
+          font-size: 6vw;
+
+          &::after {
+            width: 12vw;
+            height: 12vw;
+            top: -4vw;
+            left: -4vw;
+          }
+        }
+        span {
+          font-size: 3.5vw;
         }
       }
     }

@@ -6,4 +6,5 @@ function mapShowInfo(name) {
   }
   document.getElementById(name).style.display = "flex";
   lastShownInfoName = name;
+  window.location.href='#info';
 }
